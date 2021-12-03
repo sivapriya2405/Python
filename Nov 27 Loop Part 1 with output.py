@@ -516,3 +516,171 @@ Enter the Last number 25
 25  buzz
 
 #---------------------------------------------------------------------------------
+
+num = int(input("Enter a number: "))
+fact = 1
+for i in range(1,num + 1):
+    fact  = fact*i
+print("The factorial of {} is {}".format(num,fact))
+
+
+
+========================== RESTART: C:\Python\test.py ==========================
+Enter a number: 5
+The factorial of 5 is 120
+#-----------------------------------------------------------------------------
+
+#Task12:
+
+#Get one number from user
+#Sum of digits
+num = input("Enter a number: ")
+n=0
+for c in num:
+    n=n+int(c)
+print(n)
+
+
+#another method
+num =int(input("Enter a number: "))
+s=0
+
+while(num/10>0):
+    n=num%10
+    s=s+n
+    num= num//10
+
+========================== RESTART: C:\Python\test.py ==========================
+Enter a number: 123
+6
+
+#-----------------------------------------------------------------------------------
+#sum of digits till it become single digit
+
+def sum_number(sn):
+    n=0
+    for c in sn:
+        n=n+int(c)
+    if(n>9):
+        return sum_number(str(n))
+    else:
+       return n
+num = input("Enter a number: ")
+print(sum_number(num))
+
+
+
+========================== RESTART: C:\Python\test.py ==========================
+Enter a number: 345
+3
+
+========================== RESTART: C:\Python\test.py ==========================
+Enter a number: 765
+9
+
+
+#----------------------------------------------------------------------
+
+#Product of digits 
+num =int(input("Enter a number: "))
+s=1
+while(num/10>0):
+    n=num%10
+    s=s*n
+    num= num//10
+
+print(s)
+
+
+========================== RESTART: C:\Python\test.py ==========================
+Enter a number: 56
+30
+#-------------------------------------------------------------------------------
+#multiples of a number 
+
+#Get one integer from the user
+#9 ==> 1,3,9
+#11 ==> 1,11
+#25 ==> 1,5,25
+#16 ===> 1,2,4,8,16
+num =int(input("Enter a number: "))
+listmul=[]
+for i in range(1, num+1):
+    if (num % i) == 0:
+        listmul.append(i)
+print("Multiplies of Given Number is ",listmul)
+
+
+========================== RESTART: C:\Python\test.py ==========================
+Enter a number: 25
+Multiplies of Number is  [1, 5, 25]
+
+
+#-------------------------------------------------------------------------------
+
+#Task17:
+
+#Anagram ===> check whether given string is anagram or no
+
+#Two input strings
+#pota
+#toap
+
+#top
+#pto
+s1=input("Enter first string:")
+s2=input("Enter second string:")
+if(sorted(s1)==sorted(s2)):
+      print(" Given strings are anagrams.")
+else:
+      print("Given strings aren't anagrams.")
+
+= RESTART: C:/Users/aarumugam/AppData/Local/Programs/Python/Python310/anagram.py
+Enter first string:pot
+Enter second string:top
+ Given strings are anagrams.
+ #--------------------------------------------------------------------------------
+#task 18:
+#Program to check a number is prime or no
+ num=int(input("Enter the number "))
+flag=False
+if num > 1:
+    for i in range(2, num):
+        if (num % i) == 0:
+            flag = True
+            break
+if flag:
+    print(num, "is not a prime number")
+else:
+    print(num, "is a prime number")
+
+
+= RESTART: C:/Users/aarumugam/AppData/Local/Programs/Python/Python310/Prime.py
+Enter the number 50
+50 is not a prime number
+
+= RESTART: C:/Users/aarumugam/AppData/Local/Programs/Python/Python310/Prime.py
+Enter the number 29
+29 is a prime number
+
+
+ #--------------------------------------------------------------------------------
+#task 18:Loops task: create a dictionary from user
+n = int(input("enter a n value:"))
+dict = {}
+
+for i in range(n):
+    keys = input("Enter Key") 
+    values = (input("Enter Value"))  
+    dict[keys] = values
+print(dict)
+
+
+
+= RESTART: C:/Users/aarumugam/AppData/Local/Programs/Python/Python310/dictonary.py
+enter a n value:2
+Enter Keya
+Enter Valueapple
+Enter Keyb
+Enter Valueball
+{'a': 'apple', 'b': 'ball'}
